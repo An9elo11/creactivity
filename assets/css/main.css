@@ -302,9 +302,26 @@ hr.major {
 
 .promo{
     font-family: "Brush Script MT" ,fantasy;
+    font-weight: bold;
+    font-size: 1.2em;
     text-align: center;
     background-color: darkgreen;
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.5em 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin: 2em 0;
+}
+
+.promo div{
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+    0% {transform: translateX(0); }
+    100% {transform: translateX(-100%); }
 }
 
 /* Row */
